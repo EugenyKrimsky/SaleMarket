@@ -28,12 +28,13 @@ body{
 }
 .header{
     margin-top: 50px;
-    margin-bottom: 37px;
+    margin-bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
+    display: flex;
 }
 .nav{
+    margin-left: 3px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -43,15 +44,11 @@ body{
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-            
-}
-.phone-img {
-    margin-left: -25px;
 }
 .phone-number{
     display: block;
     margin-left: 15px;
-    margin-right: 48px;;
+    margin-right: 90px;
 }
 .heading-red{
     color: #D02B38;
@@ -75,10 +72,10 @@ body{
     margin-right: 25px;
 }
 .img-instagram{
-    margin-right: 50px;
+    margin-right: 100px;
 }
 .logo{
-    margin-right: 50px;
+    margin-right: 100px;
 }
 .img-logo{
     display: -webkit-box;
@@ -106,8 +103,17 @@ body{
     color: #D02B38;
 }
 .trans-lat{
-    margin-right: 58px;
+    margin-right: 20px;
     color: rgba(0, 0, 0, 0.2);
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 143.69%;
+}
+.trans-en {
+    margin-right: 16px;
+    color: rgba(0,0,0,0.2);
     font-family: Muller;
     font-style: normal;
     font-weight: bold;
@@ -117,9 +123,19 @@ body{
 .img-loupe{
     margin-right: 20px;
 }
+.view {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    width: 192px;
+    height: 52px;
+    background: #F9F9F9;
+    border-radius: 10px;
+    left: 30%;
+}
 .img-cart{
     margin-right: 15px;
-    margin-bottom:6px;;
+    margin-bottom: 0px;
 } 
 .search-block .btn-search{
     background:url(../img/loupe.svg) no-repeat center;
@@ -203,21 +219,17 @@ button{
 .button-all{
     padding: 13px 30px 13px 30px;
     display: block;
-    position: absolute;
     bottom: 10%;
     max-width: 200px;
     max-height: 52px;
     background: #F9F9F9;
     border-radius: 10px;
-    left: 30%;
     outline: none;
     border: none;
 }
-#btnLeft{
-    position: relative;
-    left: 40px;
-}
+
 .btn-text{
+    padding: 13px 37px 13px 36px;
     font-family: Muller;
     font-style: normal;
     font-weight: bold;
@@ -403,12 +415,12 @@ button{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 280px 30px 35px 30px;
+            flex-direction: column;
+    padding: 140px 0 0 28px;
+    text-align: left;
+
 }
 .button-all a {
     text-decoration: none;
@@ -435,8 +447,15 @@ button{
     line-height: 143.69%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.btn-left {
+
+    width: 100%;
+    margin: 0 auto;
 }
 .short-text{
+    margin-bottom: 20px;
     font-family: Muller;
     font-style: normal;
     font-weight: bold;
@@ -459,7 +478,7 @@ button{
     padding-left: 60px;
 }
 .delivery{
-    padding-top: 50px;
+    padding-top: 15px;
     padding-bottom: 64px;
 }
 .del-head::after{
@@ -511,18 +530,15 @@ button{
     padding-top: 60px;
     padding-bottom: 30px;
     margin: 0;
-    .container {
-        max-width: 1104px;
-    }
 }
 .footer-wrap{
+    padding: 0px 65px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: space-between;
-    position: relative;
+            justify-content: center;
 }
 .footer-group{
     display: -webkit-box;
@@ -541,7 +557,6 @@ button{
     margin-top: -120px;
 }
 .light-heading{
-    margin-bottom: 27px;
     font-family: Muller;
     font-style: normal;
     font-weight: bold;
@@ -555,7 +570,7 @@ button{
     font-family: Muller;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 143.69%;
     letter-spacing: 0.08em;
     color: #FFFFFF;
@@ -565,7 +580,7 @@ button{
     font-family: Muller;
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 143.69%;
     color: #FFFFFF;
 }
@@ -619,7 +634,7 @@ button{
     font-family: Muller;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 143.69%;
     text-align: center;
     letter-spacing: 0.02em;
@@ -637,8 +652,11 @@ button{
     top: 3380px;
     left: 280px;
 }
+.phone-img{
+    margin-left: -25px;
+}
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -646,7 +664,7 @@ button{
     height: 30px;
     width: 30px;
 }
-@media (max-width:1280px){
+  @media (max-width:1280px){
     .short-info{
         top: -66px;
     }
@@ -778,9 +796,6 @@ button{
     }
     .img-instagram{
         margin-right: 60px;
-    }
-    .trans-lat{
-        margin-right: 50px;
     }
     .logo{
         margin-right: 50px;
