@@ -6,16 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-prev'
         },
         slidesPerView: 4,
-    });
+    });   
+    const menuBtn = $('.btn-search'),
+    menu = $('.input-search');
 
-    $('.btn-search').click(function(event) {
-    	$(this).toggleClass('active').next('.input-search').slideToggle(300);
-
-    })
-    $(document).mouseup(function (e){ 
-        var div = $(".input-search"); // 
-        if (!div.is(e.target)) { ;
-            div.slideUp(300); 
+    menuBtn.on('click', function() {
+        if ( $(this).hasClass('is-active') ) {
+            $(this).removeClass('is-active');
+            menu.slideUp();
+        } else {
+            $(this).addClass('is-active');
+            menu.slideDown();
         }
     });
+    
+    $(document).click(function (e) {
+        if ( !menuBtn.is(e.target) && !menu.is(e.target) && menu.has(e.target).length === 0) {
+            menu.slideUp();
+            menuBtn.removeClass('is-active');
+        };
+});
 });
