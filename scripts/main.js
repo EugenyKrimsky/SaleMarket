@@ -12,5 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     	$(this).toggleClass('active').next('.input-search').slideToggle(300);
 
     })
-
+    $(document).mouseup(function (e){ 
+        var div = $(".input-search"); // 
+        if (!div.is(e.target)) { ;
+            div.slideUp(300); 
+        }
+    });
 });
