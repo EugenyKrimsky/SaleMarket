@@ -48,5 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
     else if (get_name_browser() == "Safari") {
         $('.btn-text').css('padding', '13px 32px 13px 32px')
+        $('.btn-text').css('font-size', '16px');  
     }
 });
