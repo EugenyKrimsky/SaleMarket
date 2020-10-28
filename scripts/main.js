@@ -40,14 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     return false;
     }
 
-    if (get_name_browser() == "Safari" || get_name_browser() == "Firefox" || get_name_browser() == "IE") {
+    if (get_name_browser() == "Firefox" || get_name_browser() == "IE") {
         $('.btn-text').css('font-size', '17px');  
         $('.heading-red').css('color', '#D02B38');
         $('.heading-red').css('text-decoration', 'none');
-    
     } 
-    else if (get_name_browser() == "Safari") {
+    if (get_name_browser() == "Safari") {
         $('.btn-text').css('padding', '13px 32px 13px 32px')
         $('.btn-text').css('font-size', '16px');  
+        $('.heading-red').css('color', '#D02B38');
+        $('.heading-red').css('text-decoration', 'none');
     }
 });
