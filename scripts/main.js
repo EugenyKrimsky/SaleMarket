@@ -51,4 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.heading-red').css('color', '#D02B38');
         $('.heading-red').css('text-decoration', 'none');
     }
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+        });
+         
+        $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 });
