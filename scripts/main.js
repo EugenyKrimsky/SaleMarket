@@ -38,11 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ua.search(/Safari/) > 0) return 'Safari';
     if (ua.search(/MSIE/) > 0) return 'IE';
     return false;
-}
+    }
 
-if (get_name_browser() == "Safari" || get_name_browser() == "Firefox" || get_name_browser() == "IE") {
-    $('.btn-text').css('font-size', '17px');  
-    $('.heading-red').css('color', '#D02B38');
-    $('.heading-red').css('text-decoration', 'none');
-}
+    if (get_name_browser() == "Safari" || get_name_browser() == "Firefox" || get_name_browser() == "IE") {
+        $('.btn-text').css('font-size', '17px');  
+        $('.heading-red').css('color', '#D02B38');
+        $('.heading-red').css('text-decoration', 'none');
+    
+    } 
+    else if (get_name_browser() == "Safari") {
+        $('.btn-text').css('padding', '13px 32px 13px 32px')
+    }
 });
