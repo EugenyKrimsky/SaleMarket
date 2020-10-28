@@ -25,5 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.slideUp();
             menuBtn.removeClass('is-active');
         };
+
 });
+    function get_name_browser(){
+    // получаем данные userAgent
+    var ua = navigator.userAgent;    
+    // с помощью регулярного выражения
+    // ищем упоминание названия браузера
+    if (ua.search(/Chrome/) > 0) return 'Chrome';
+    if (ua.search(/Firefox/) > 0) return 'Firefox';
+    if (ua.search(/Opera/) > 0) return 'Opera';
+    if (ua.search(/Safari/) > 0) return 'Safari';
+    if (ua.search(/MSIE/) > 0) return 'IE';
+    return false;
+}
+
+if (get_name_browser() == "Safari" || get_name_browser() == "Firefox" || get_name_browser() == "IE") {
+    $('.btn-text').css('font-size', '17px');  
+    $('.heading-red').css('color', '#D02B38');
+    $('.heading-red').css('text-decoration', 'none');
+}
 });
