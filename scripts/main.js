@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuBtn.removeClass('is-active');
         };
 
-});
+    });
     function get_name_browser(){
     // получаем данные userAgent
     var ua = navigator.userAgent;    
@@ -39,7 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ua.search(/MSIE/) > 0) return 'IE';
     return false;
     }
-
+    if (get_name_browser() == "Firefox") {
+        // $('.review textarea').css('padding', '17px 158px 57px 170px');
+        // $('.review input.short-input').css('padding', '17px 177px 17px 183px');
+        $('.review__btn').css('color', 'black');
+    }
     if (get_name_browser() == "Firefox" || get_name_browser() == "IE") {
         $('.btn-text').css('font-size', '17px');  
         $('.heading-red').css('color', '#D02B38');
@@ -51,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.heading-red').css('color', '#D02B38');
         $('.heading-red').css('text-decoration', 'none');
     }
+    
     $(window).scroll(function(){
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
